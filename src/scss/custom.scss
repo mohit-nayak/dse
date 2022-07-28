@@ -1,0 +1,28 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "variables";
+
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+);
+
+
+$custom-colors: (
+        //"bg-light": #000000,
+);
+
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$enable-negative-margins: true;
+
+@import "~bootstrap";
+

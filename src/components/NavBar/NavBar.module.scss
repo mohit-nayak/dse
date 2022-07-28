@@ -1,0 +1,27 @@
+@import "../../scss/variables";
+@import "../../scss/utils";
+
+.Nav {
+    padding: 1rem 0 !important;
+
+    .NavLink {
+        font-size: pxToRem(14) !important;
+        color: #fff !important;
+
+        @media (max-width: 576px) {
+            font-size: pxToRem(12) !important;
+        }
+    }
+
+    .NavBtn {
+        font-weight: 400;
+    }
+}
+
+.Absolute {
+    position: absolute !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
