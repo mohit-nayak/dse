@@ -1,0 +1,79 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.Features {
+  padding-bottom: pxToRem(66);
+
+  .Content {
+    .TitleWrapper {
+      max-width: pxToRem(977);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: pxToRem(48);
+
+      .Title {
+        font-size: pxToRem(30);
+        color: $text-dark;
+        font-weight: 400;
+        line-height: pxToRem(57);
+        margin-bottom: pxToRem(20);
+
+        @media (max-width: 767px) {
+          font-size: pxToRem(26);
+          line-height: pxToRem(40);
+        }
+      }
+
+      .Sub {
+        font-size: pxToRem(14);
+        line-height: pxToRem(25);
+      }
+    }
+
+    .FeatureGrid {
+      margin-bottom: pxToRem(42);
+
+      @media (max-width: 767px) {
+        margin-bottom: pxToRem(10);
+      }
+    }
+
+    .GridItem {
+      margin-bottom: pxToRem(32);
+    }
+
+    .FeatureTile {
+      height: 100%;
+      border-radius: pxToRem(20);
+      padding: pxToRem(20) pxToRem(23);
+      box-shadow: 0 pxToRem(36) pxToRem(71) rgba(0, 0, 0, 0.02);
+
+      .Title {
+        font-size: pxToRem(16);
+        letter-spacing: pxToRem(0.4);
+        margin-bottom: pxToRem(11);
+      }
+
+      .Desc {
+        line-height: pxToRem(24);
+      }
+
+      .Icon {
+        width: pxToRem(50);
+        height: pxToRem(50);
+        padding: pxToRem(14);
+        border-radius: 50%;
+        background-color: $primary;
+        margin-bottom: pxToRem(17);
+      }
+    }
+
+    .SeePricingBtn {
+      display: block;
+      width: max-content;
+      margin: 0 auto pxToRem(36);
+      padding-left: pxToRem(62);
+      padding-right: pxToRem(62);
+    }
+  }
+}

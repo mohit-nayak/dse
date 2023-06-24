@@ -2,6 +2,8 @@
 title: "First Post!"
 date: 2021-09-01
 published: false
+readTime: 3 minutes
+preview: blog-preview-placeholder.png
 slug: post-en
 tags: ['test', 'DevOps']
 ---

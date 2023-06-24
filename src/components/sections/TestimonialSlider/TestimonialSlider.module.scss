@@ -1,0 +1,96 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.Testimonial {
+  position: relative;
+  padding-top: pxToRem(56);
+
+  .BgWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: pxToRem(514);
+    background-color: $navy-blue;
+
+    &:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: pxToRem(14);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.1;
+      background-image: url("../../../assets/images/art/testmonial-slider-bg.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .Content {
+    position: relative;
+
+    .Title {
+      margin-bottom: pxToRem(16);
+      line-height: pxToRem(45);
+    }
+
+    .Sub {
+      line-height: pxToRem(25);
+    }
+  }
+
+  .SliderWrapper {
+    position: relative;
+
+    @media (min-width: 768px) {
+      top: pxToRem(-35);
+    }
+
+    .Slider {
+      overflow: hidden;
+      border-radius: pxToRem(20);
+    }
+  }
+
+  .SliderControlBtnWrapper {
+    margin-bottom: pxToRem(20);
+
+    .SliderControlBtn {
+      width: pxToRem(60);
+      height: pxToRem(60);
+      border: 0;
+      border-radius: 50%;
+      background-color: $white;
+
+      img {
+        width: pxToRem(13);
+      }
+    }
+  }
+
+  .SliderPagination {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: pxToRem(40);
+
+    .SliderPaginationDot {
+      width: pxToRem(14);
+      height: pxToRem(14);
+      margin: 0 pxToRem(10);
+      background-color: $primary;
+      opacity: 0.3;
+    }
+
+    .SliderPaginationDotActive {
+      background-color: $primary;
+      opacity: 1;
+    }
+  }
+}

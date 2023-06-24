@@ -1,0 +1,124 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.ContactMe {
+  position: relative;
+  padding-top: pxToRem(65);
+  background-color: $navy-blue;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../../assets/images/art/contact-me-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: 992px) {
+    .Container {
+      max-width: pxToRem(1178);
+      margin: auto;
+    }
+  }
+
+  .Content {
+    position: relative;
+
+    .Text {
+      padding-left: pxToRem(53);
+
+      @media (max-width: 767px) {
+        padding-left: pxToRem(20);
+      }
+
+      .Title {
+        font-size: pxToRem(50);
+        line-height: pxToRem(53);
+        margin-bottom: pxToRem(34);
+        letter-spacing: pxToRem(0.4);
+
+        @media (max-width: 767px) {
+          font-size: pxToRem(45);
+          line-height: pxToRem(48);
+        }
+      }
+
+      .Sub {
+        margin: 0;
+        font-size: pxToRem(20);
+        line-height: pxToRem(35);
+        letter-spacing: pxToRem(0.6);
+
+        @media (max-width: 767px) {
+          font-size: pxToRem(18);
+          line-height: pxToRem(32);
+        }
+
+        strong {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .FormContainer {
+      position: relative;
+      top: pxToRem(50);
+      background-color: $white;
+      border-radius: pxToRem(20);
+      padding: pxToRem(43) pxToRem(23) pxToRem(15);
+      box-shadow: 0 pxToRem(22) pxToRem(71) rgba(0, 0, 0, 0.03);
+
+      .InputRow {
+        margin-bottom: pxToRem(24);
+      }
+
+      .Label {
+        font-weight: 500;
+        font-size: pxToRem(16);
+        line-height: pxToRem(26);
+        color: $black;
+         margin-bottom: pxToRem(14);
+      }
+
+      .Input {
+        width: 100%;
+        font-size: pxToRem(12);
+        padding: pxToRem(11) pxToRem(18);
+        line-height: pxToRem(26);
+        border-radius: 0;
+        background-color: #FBFBFB;
+        border: pxToRem(0.4) solid #DCDCDC;
+
+        &::placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
+          color: $black;
+          opacity: 0.2;
+        }
+      }
+
+      .SelectBox {
+        &:invalid {
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .TextArea {
+        height: pxToRem(148);
+        line-height: pxToRem(22);
+      }
+
+      .SubmitBtn {
+        font-size: pxToRem(16);
+        line-height: pxToRem(24);
+        padding: pxToRem(18) pxToRem(54);
+        margin-top: pxToRem(29);
+        text-transform: uppercase;
+      }
+    }
+  }
+}

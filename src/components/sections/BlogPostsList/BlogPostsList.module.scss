@@ -1,0 +1,58 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.BlogPostsList {
+  padding: pxToRem(100) 0 pxToRem(60);
+
+  @media (max-width: 767px) {
+    padding: pxToRem(75) 0 pxToRem(40);
+  }
+
+  .Content {
+    .Title {
+      font-weight: 400;
+      font-size: pxToRem(26);
+      line-height: pxToRem(53);
+      letter-spacing: pxToRem(0.4);
+      margin-bottom: pxToRem(27);
+
+      @media (max-width: 767px) {
+        font-size: pxToRem(26);
+        line-height: pxToRem(53);
+      }
+    }
+
+    .PaginationWrapper {
+      display: flex;
+      justify-content: end;
+
+      .Pagination {
+        margin-bottom: 0;
+
+        :global {
+          .page-link {
+            font-size: pxToRem(20);
+            line-height: pxToRem(30);
+            border: 0 !important;
+            font-weight: 500;
+            padding: pxToRem(5) pxToRem(15) pxToRem(8) !important;
+            border-radius: pxToRem(2) !important;
+            margin-right: pxToRem(6);
+          }
+
+          a.page-link {
+            color: $black;
+            background-color: $white;
+            box-shadow: 0 pxToRem(4) pxToRem(2) rgba(0, 0, 0, 0.05) !important;
+          }
+
+          span.page-link {
+            color: $white;
+            background-color: $primary;
+            box-shadow: 0 pxToRem(4) pxToRem(2) rgba(86, 183, 226, 0.3) !important;
+          }
+        }
+      }
+    }
+  }
+}

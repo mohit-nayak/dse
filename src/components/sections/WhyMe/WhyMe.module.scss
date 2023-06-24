@@ -1,0 +1,141 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.WhyMe {
+  padding: pxToRem(226) 0 pxToRem(209);
+
+  @media (max-width: 991px) {
+    padding: pxToRem(160) 0 pxToRem(140);
+  }
+
+  @media (max-width: 767px) {
+    padding: pxToRem(120) 0 pxToRem(100);
+  }
+
+  .Content {
+
+    .Row {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 1200px) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .ImgContainer {
+        position: relative;
+        left: pxToRem(32);
+
+        @media (max-width: 991px) {
+          left: pxToRem(10);
+          margin-bottom: 2rem;
+        }
+
+        .Image {
+          position: relative;
+          height: pxToRem(728) !important;
+          width: pxToRem(487) !important;
+
+          .ImgWrapper {
+            position: absolute !important;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 100;
+          }
+
+          img {
+            position: absolute;
+            z-index: 1;
+            height: 100% !important;
+            width: 100% !important;
+            border-radius: pxToRem(20) !important;
+            box-shadow: 0 pxToRem(22) pxToRem(71) rgba(0, 0, 0, 0.03);
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: pxToRem(28);
+            left: pxToRem(-25);
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            max-height: pxToRem(728);
+            max-width: pxToRem(497);
+            border-radius: pxToRem(20);
+            background-color: $primary;
+            box-shadow: 0 pxToRem(22) pxToRem(71) rgba(0, 0, 0, 0.03);
+          }
+
+          @media (max-width: 991px) {
+            max-height: pxToRem(628);
+            max-width: pxToRem(400);
+            width: 100%;
+
+            .ImgWrapper, img, &:before {
+              max-height: pxToRem(628);
+              max-width: pxToRem(400);
+              width: 100%;
+            }
+          }
+
+          @media (max-width: 576px) {
+            max-height: pxToRem(450);
+            max-width: pxToRem(300);
+
+            .ImgWrapper, img, &:before {
+              max-height: pxToRem(450);
+              max-width: pxToRem(300);
+            }
+          }
+        }
+      }
+
+      .DescContainer {
+        border-radius: pxToRem(20);
+        padding: pxToRem(27) pxToRem(51) pxToRem(32) pxToRem(74);
+        box-shadow: 0 pxToRem(22) pxToRem(71) rgba(0, 0, 0, 0.03);
+
+        @media (max-width: 1200px) {
+          margin-top: 2rem;
+          padding: pxToRem(27) pxToRem(30) pxToRem(32) pxToRem(40);
+        }
+
+        .Title {
+          font-size: pxToRem(35);
+          line-height: pxToRem(53);
+          letter-spacing: pxToRem(0.4);
+        }
+
+        .Text {
+          line-height: pxToRem(26);
+          margin-bottom: pxToRem(12);
+        }
+
+        .Achievements {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-top: pxToRem(24);
+
+          img {
+            margin-right: pxToRem(35);
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            @media (max-width: 767px) {
+              justify-content: center;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.FAQ {
+  @media (min-width: 992px) {
+    .Container {
+      max-width: pxToRem(1178);
+      margin: auto;
+    }
+  }
+
+  .Content {
+    max-width: pxToRem(1016);
+    margin: auto;
+    padding-bottom: pxToRem(180);
+
+    @media (max-width: 767px) {
+      padding-bottom: pxToRem(100);
+    }
+
+    .Title {
+      font-size: pxToRem(30);
+      line-height: pxToRem(57);
+      margin-bottom: pxToRem(40);
+
+      @media (max-width: 767px) {
+        font-size: pxToRem(26);
+        line-height: pxToRem(40);
+        margin-bottom: pxToRem(20);
+      }
+    }
+
+    .QnA {
+      border: 0;
+      background: $white;
+      box-shadow: 0 pxToRem(36) pxToRem(71) rgba(0, 0, 0, 0.02);
+      border-radius: pxToRem(20);
+      overflow: hidden;
+      margin-bottom: pxToRem(32);
+
+      @media (max-width: 767px) {
+        margin-bottom: pxToRem(20);
+      }
+
+      .Question {
+        :global {
+          button {
+            font-weight: 500;
+            font-size: pxToRem(18);
+            line-height: pxToRem(26);
+            color: $primary !important;
+            background-color: $white !important;
+            border: 0 !important;
+            padding: pxToRem(35) pxToRem(37) !important;
+            box-shadow: none !important;
+
+            &.collapsed {
+              color: $text-dark !important;
+            }
+
+            &:after {
+              right: 0;
+              height: pxToRem(14) !important;
+              width: pxToRem(27) !important;
+              background-image: url("../../../assets/icons/arrow-up-light-blue.svg");
+              transform: rotate(0);
+              background-size: contain;
+            }
+
+            &.collapsed:after {
+              width: pxToRem(14) !important;
+              height: pxToRem(27) !important;
+              background-image: url("../../../assets/icons/arrow-right-gray.svg");
+              transform: rotate(0);
+            }
+
+            @media (max-width: 767px) {
+              font-size: pxToRem(16);
+              padding: pxToRem(28) pxToRem(32) !important;
+            }
+          }
+        }
+      }
+
+      .Answer {
+        color: $gray;
+        font-size: pxToRem(12);
+        line-height: pxToRem(23);
+        padding: 0 pxToRem(37) pxToRem(32);
+      }
+    }
+  }
+}

@@ -1,23 +1,35 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
+import MainLayout from '../../layouts/mainLayout';
+import ContactMe from '../../components/sections/ContactMe2/ContactMe2';
+import './postDetails.scss';
 
 export default function Template({
-                                     data, // this prop will be injected by the GraphQL query below.
+                                     data,
                                  }) {
-    const { markdownRemark } = data // data.markdownRemark holds your post data
+    const { markdownRemark } = data
     const { frontmatter, html } = markdownRemark
     console.log("entered", frontmatter, html)
+
     return (
-        <div className="blog-post-container">
-            <div className="blog-post">
-                <h1>{frontmatter.title}</h1>
-                <h2>{frontmatter.date}</h2>
-                <div
-                    className="blog-post-content"
-                    dangerouslySetInnerHTML={{ __html: html }}
-                />
-            </div>
-        </div>
+        <MainLayout navAbsolute={false} navLight={true}>
+            <title>{frontmatter.title}</title>
+
+            <section className="blog-post-container">
+                <div className={`container`}>
+                    <article className="blog-post">
+                        <h1 className="title">{frontmatter.title}</h1>
+                        <div
+                            className="blog-post-content block"
+                            dangerouslySetInnerHTML={{ __html: html }}
+                        />
+                    </article>
+                </div>
+            </section>
+            
+            <ContactMe />
+            <div className="footer-strip py-5"/>
+        </MainLayout>
     )
 }
 
@@ -29,6 +41,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        readTime
+        preview
       }
     }
   }

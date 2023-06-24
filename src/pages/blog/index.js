@@ -1,17 +1,30 @@
 import React from "react"
-import { graphql } from "gatsby"
-import PostLink from "../../components/postLink";
+import {graphql} from "gatsby"
+import MainLayout from "../../layouts/mainLayout";
+import BlogBanner from "../../components/sections/BlogBanner/BlogBanner";
+import BlogPostsList from "../../components/sections/BlogPostsList/BlogPostsList";
+import ContactMe from "../../components/sections/ContactMe1/ContactMe1";
 
 const Index = ({
-                       data: {
-                           allMarkdownRemark: { edges },
-                       },
-                   }) => {
-    const Posts = edges
-        .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-        .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+                   data: {
+                       allMarkdownRemark: {edges},
+                   },
+               }) => {
 
-    return <div>{Posts}</div>
+    const posts = edges
+        .filter(edge => !!edge.node.frontmatter.date)
+        .map(edge => ({...edge.node}))
+
+    return (
+        <MainLayout>
+            <title>Blog</title>
+
+            <BlogBanner/>
+            <BlogPostsList posts={posts}/>
+            <ContactMe />
+            <div className="footer-strip py-5"/>
+        </MainLayout>
+    )
 }
 
 export default Index
@@ -27,6 +40,8 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             slug
             title
+            readTime
+            preview
           }
         }
       }

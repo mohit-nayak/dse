@@ -11,14 +11,13 @@ $theme-colors: (
         "warning":    $warning,
         "danger":     $danger,
         "light":      $light,
-        "dark":       $dark
+        "dark":       $dark,
+        "gray":       $gray,
 );
-
 
 $custom-colors: (
-        //"bg-light": #000000,
+        //"textdark": #1C1C1C,
 );
-
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
 

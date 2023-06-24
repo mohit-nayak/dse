@@ -1,0 +1,110 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.CustomPlan {
+  .Container {
+    @media (min-width: 991px) {
+      max-width: pxToRem(1016);
+      margin: auto;
+    }
+  }
+
+  .Content {
+    padding-bottom: pxToRem(106);
+
+    .Tile {
+      position: relative;
+      padding: pxToRem(50) pxToRem(61) pxToRem(50) pxToRem(48);
+      margin-bottom: pxToRem(47);
+      background-color: $navy-blue;
+      border-radius: pxToRem(20);
+
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url("../../../assets/images/art/custom-plan-bg.png");
+        background-repeat: no-repeat;
+        background-size: pxToRem(265);
+        background-position: right;
+        opacity: 0.2;
+      }
+    }
+
+    .Wrapper {
+      position: relative;
+      max-width: pxToRem(465);
+    }
+
+    .NeedMore {
+      font-size: pxToRem(20);
+      line-height: pxToRem(30);
+      font-weight: 500;
+    }
+
+    .Title {
+      font-size: pxToRem(50);
+      line-height: pxToRem(75);
+
+      @media (max-width: 767px) {
+        font-size: pxToRem(44);
+        line-height: pxToRem(65);
+      }
+    }
+
+    .Sub {
+      line-height: pxToRem(25);
+
+      strong, a {
+        font-weight: 700;
+      }
+    }
+
+    .CTA {
+      position: relative;
+      line-height: pxToRem(21);
+      white-space: nowrap;
+      padding-left: pxToRem(88);
+      padding-right: pxToRem(88);
+
+      @media (max-width: 767px) {
+        margin-top: 1rem;
+        padding-left: pxToRem(60);
+        padding-right: pxToRem(60);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: pxToRem(23);
+        width: pxToRem(17);
+        height: pxToRem(14);
+        transform: translateY(-50%);
+        background-image: url("../../../assets/icons/arrow-right-2.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+    }
+
+    .Desc {
+      p {
+        line-height: pxToRem(26);
+        margin-bottom: pxToRem(31);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

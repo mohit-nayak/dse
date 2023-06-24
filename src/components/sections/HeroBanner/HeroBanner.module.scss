@@ -1,0 +1,148 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.Banner {
+  position: relative;
+  padding: 10rem 2rem 12rem;
+
+  @media (max-width: 767px) {
+    padding: 8rem 1rem 10rem;
+  }
+
+  .BannerBg {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+
+    @media (max-width: 767px) {
+      left: -150%;
+    }
+  }
+
+  .BannerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(108.04deg, #0E0D54 13.78%, rgba(30, 28, 164, 0) 137.68%);
+    opacity: 0.5;
+  }
+
+  .Content {
+    position: relative;
+    max-width: pxToRem(670);
+    margin-left: 0;
+  }
+
+  .Title {
+    font-size: pxToRem(40);
+    line-height: pxToRem(60);
+    margin-bottom: pxToRem(45);
+
+    @media (max-width: 767px) {
+      font-size: pxToRem(36);
+      line-height: pxToRem(50);
+      margin-bottom: pxToRem(40);
+    }
+  }
+
+  .Testimonial {
+    position: relative;
+    border-radius: pxToRem(26);
+    overflow: hidden;
+    max-width: pxToRem(465);
+    margin-top: pxToRem(59);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(181, 181, 181, 0.3) -36.99%, rgba(238, 238, 238, 0.1) 119.14%);
+      opacity: 0.5;
+      backdrop-filter: blur(50px);
+    }
+
+    .StarIcon {
+      width: pxToRem(25);
+      margin-right: pxToRem(5);
+    }
+
+    .QuoteIcon {
+      width: pxToRem(16);
+      margin-right: pxToRem(3);
+    }
+
+    .Feedback {
+      font-size: pxToRem(16);
+      font-style: italic;
+      line-height: pxToRem(29);
+    }
+
+    @media (max-width: 767px) {
+      margin-top: pxToRem(55);
+
+      .StarIcon {
+        width: pxToRem(20);
+      }
+
+      .QuoteIcon {
+        width: pxToRem(13);
+      }
+    }
+  }
+}
+
+.CompaniesSupported {
+  position: relative;
+  top: pxToRem(-80);
+
+  .Title {
+    font-size: pxToRem(26);
+    margin-bottom: 2rem;
+  }
+
+  .Content {
+    padding: pxToRem(53) pxToRem(83) pxToRem(66);
+    background-color: $white;
+    border-radius: pxToRem(20);
+    box-shadow: 0 pxToRem(22) pxToRem(71) rgba(0, 0, 0, 0.03);
+  }
+
+  .Logo {
+    padding: 1rem;
+  }
+
+  @media (max-width: 991px) {
+    .Logo {
+      width: 33%;
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    top: pxToRem(-70);
+
+    .Title {
+      font-size: pxToRem(22);
+      margin-bottom: 2rem;
+    }
+
+    .Content {
+      padding: pxToRem(40) pxToRem(40) pxToRem(50);
+    }
+
+    .Logo {
+      width: 50%;
+      padding: 1rem;
+    }
+  }
+}

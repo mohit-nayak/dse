@@ -1,0 +1,82 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.PostLink {
+  .Content {
+
+    .Tile {
+      display: flex;
+      overflow: hidden;
+      background-color: $white;
+      margin-bottom: pxToRem(42);
+      border-radius: pxToRem(20);
+      box-shadow: 0 pxToRem(22) pxToRem(71) rgba(0, 0, 0, 0.03);
+
+      @media (max-width: 991px) {
+        flex-wrap: wrap;
+      }
+
+      .ImgWrapper {
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          @media (max-width: 991px) {
+            height: auto;
+            max-width: 100%;
+          }
+        }
+      }
+
+      .DetailsWrapper {
+        padding: pxToRem(39) pxToRem(20) pxToRem(25) pxToRem(40);
+
+        .Title {
+          font-size: pxToRem(22);
+          line-height: pxToRem(33);
+          letter-spacing: pxToRem(0.4);
+          margin-bottom: pxToRem(14);
+        }
+
+        .Desc {
+          font-size: pxToRem(14);
+          line-height: pxToRem(28);
+          letter-spacing: pxToRem(0.4);
+          margin-bottom: 0;
+        }
+
+        .ReadBtnWrapper {
+          margin-top: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          @media (max-width: 767px) {
+            flex-wrap: wrap;
+          }
+
+          .ReadTime {
+            color: $primary;
+            font-weight: 600;
+            font-size: pxToRem(14);
+            line-height: pxToRem(28);
+            letter-spacing: pxToRem(0.4);
+            margin-bottom: 0;
+          }
+
+          .ReadBtn {
+            padding: pxToRem(16) pxToRem(40);
+            text-transform: uppercase;
+
+            @media (max-width: 767px) {
+              padding: pxToRem(13) pxToRem(30) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.BlogBanner {
+  padding: pxToRem(235) 0 pxToRem(200);
+  background-color: $navy-blue;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../assets/images/blog-banner-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width: 767px) {
+    padding: pxToRem(150) 0 pxToRem(140);
+  }
+
+  .Content {
+    position: relative;
+    max-width: pxToRem(670);
+    margin: auto;
+
+    .Title {
+      font-size: pxToRem(70);
+      line-height: pxToRem(69);
+      margin-bottom: pxToRem(36);
+
+      @media (max-width: 767px) {
+        font-size: pxToRem(50);
+        line-height: pxToRem(55);
+      }
+    }
+
+    .Sub {
+      line-height: pxToRem(25);
+    }
+  }
+}

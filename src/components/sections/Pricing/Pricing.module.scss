@@ -1,0 +1,105 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.Pricing {
+  padding: 3rem 0 pxToRem(105);
+
+  .TitleWrapper {
+    max-width: pxToRem(692);
+    margin: 0 auto pxToRem(40);
+
+    .Title {
+      font-size: pxToRem(30);
+      line-height: pxToRem(57);
+      margin-bottom: pxToRem(20);
+
+      @media (max-width: 767px) {
+        font-size: pxToRem(26);
+        line-height: pxToRem(40);
+      }
+    }
+
+    .Sub {
+      color: $gray;
+      line-height: pxToRem(25);
+    }
+  }
+
+  .Blue {
+    color: $blue;
+  }
+
+  .Content {
+    .Plan {
+      background-color: $white;
+      border-radius: pxToRem(20);
+      padding: pxToRem(33) pxToRem(27);
+      box-shadow: 0 pxToRem(36) pxToRem(71) rgba(0, 0, 0, 0.02);
+
+      @media (max-width: 991px) {
+        margin-bottom: 2rem;
+      }
+
+      .Name {
+        color: #2B2B2B;
+        font-size: pxToRem(26);
+        line-height: pxToRem(39);
+        margin-bottom: pxToRem(18);
+      }
+
+      .Desc {
+        color: #767D86;
+        line-height: pxToRem(22);
+        margin: 0;
+      }
+
+      .Price {
+        color: $primary;
+        font-size: pxToRem(50);
+        line-height: pxToRem(39);
+        margin: pxToRem(34) 0 pxToRem(24);
+      }
+
+      .Currency {
+        color: $primary;
+        font-size: pxToRem(20);
+        line-height: pxToRem(30);
+      }
+
+      .SelectBtn {
+        width: 100%;
+        max-width: pxToRem(340);
+        margin: pxToRem(27) auto pxToRem(35);
+        padding-top: pxToRem(19);
+        padding-bottom: pxToRem(19);
+      }
+
+      .CheckList {
+        .Item {
+          color: #222222;
+          position: relative;
+          font-weight: 500;
+          line-height: pxToRem(22);
+          margin-bottom: pxToRem(20);
+          padding-left: pxToRem(28);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: pxToRem(20);
+            height: pxToRem(20);
+            background-image: url("../../../assets/icons/check-circle-green.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+}

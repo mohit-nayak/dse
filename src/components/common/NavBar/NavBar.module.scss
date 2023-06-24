@@ -1,0 +1,107 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.Nav {
+    padding: 1rem 0 !important;
+
+    .Container {
+        @media (max-width: 991px) {
+           padding: 0;
+
+            .LogoWrapper {
+                margin-left: calc(var(--bs-gutter-x) * 0.5);
+            }
+
+            .Toggler {
+                border: 0;
+                background-color: $primary;
+                margin-right: calc(var(--bs-gutter-x) * 0.5);
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .LogoWrapper {
+        img {
+            width: pxToRem(145);
+            object-fit: contain !important;
+
+            @media (max-width: 576px) {
+                width: pxToRem(125);
+            }
+        }
+    }
+
+    .LinksWrapper {
+        @media (max-width: 991px) {
+            padding: pxToRem(10) 0 pxToRem(20);
+            text-align: left !important;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .NavLink {
+        font-size: pxToRem(14) !important;
+        color: $white !important;
+
+        @media (max-width: 991px) {
+            text-align: left !important;
+            //color: $black !important;
+        }
+
+        @media (max-width: 576px) {
+            font-size: pxToRem(12) !important;
+        }
+    }
+
+    .NavBtn {
+        color: $white !important;
+        font-weight: 500;
+        line-height: pxToRem(21);
+        letter-spacing: pxToRem(0.4);
+        padding: pxToRem(15) pxToRem(32) !important;
+
+        @media (max-width: 991px) {
+            width: max-content;
+        }
+
+        @media (max-width: 576px) {
+            margin-top: pxToRem(8);
+            width: max-content;
+            padding: pxToRem(10) pxToRem(28) !important;
+        }
+    }
+}
+
+.Light {
+    &.Nav {
+        background-color: $white;
+        box-shadow: 0 pxToRem(22) pxToRem(71) rgba(0, 0, 0, 0.03);
+    }
+
+    .LinksWrapper {
+        @media (max-width: 991px) {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .NavLink {
+        color: #1F1F1F !important;
+    }
+
+    .NavBtn {
+        color: $white !important;
+    }
+}
+
+.Absolute {
+    position: absolute !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}

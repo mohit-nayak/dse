@@ -1,0 +1,96 @@
+@import "../../../scss/variables";
+@import "../../../scss/utils";
+
+.Footer {
+  .Content {
+    .Main {
+      padding: pxToRem(74) 0;
+      background-color: #0E0D2D;
+
+      @media (max-width: 767px) {
+        padding: pxToRem(50) 0 pxToRem(30);
+      }
+
+      .Logo {
+        width: 100%;
+        max-width: pxToRem(265);
+        margin-bottom: pxToRem(25);
+      }
+
+      .Sub {
+        font-size: pxToRem(12);
+        line-height: pxToRem(21);
+        max-width: pxToRem(290);
+      }
+
+      .LinksWrapper {
+        .Title {
+          font-weight: 600;
+          line-height: pxToRem(21);
+          margin-bottom: pxToRem(10);
+
+          .Icon {
+            width: pxToRem(17);
+            margin-right: pxToRem(8);
+          }
+
+          @media (max-width: 991px) {
+            margin-top: pxToRem(40);
+          }
+        }
+
+        .Item {
+          padding-left: pxToRem(26);
+          line-height: pxToRem(26);
+          margin-bottom: 0;
+          //max-width: pxToRem(165);
+
+          a {
+            color: $white;
+          }
+        }
+
+        .Email {
+          word-break: break-all;
+        }
+
+        .SocialLinksWrapper {
+          margin-top: pxToRem(19);
+          display: flex;
+
+          .SocialLink {
+            width: pxToRem(40);
+            height: pxToRem(40);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $primary;
+            margin-right: pxToRem(13);
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+
+          @media (max-width: 767px) {
+            margin-top: pxToRem(40);
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .CopyrightWrapper {
+      padding: pxToRem(27) 0;
+      background-color: #0C0B22;
+      text-align: center;
+
+      p {
+        line-height: pxToRem(26);
+        letter-spacing: pxToRem(0.4);
+        margin: 0;
+      }
+    }
+  }
+}
